@@ -1,22 +1,64 @@
+
 [
   {
     "id": 1,
-    "text": "What is the capital of France?",
+    "text": "What is the output of print(list(range(3)))?",
     "options": [
-      {"value": "a", "text": "Paris"},
-      {"value": "b", "text": "London"},
-      {"value": "c", "text": "Berlin"}
+      {"value": "a", "text": "[0, 1, 2]", "is_correct": true},
+      {"value": "b", "text": "[1, 2, 3]", "is_correct": false},
+      {"value": "c", "text": "range(3)", "is_correct": false}
     ],
     "answer": "a"
   },
   {
     "id": 2,
-    "text": "2 + 2 = ?",
+    "text": "Which of the following are mutable types in Python? (choose all that apply)",
     "options": [
-      {"value": "a", "text": "3"},
-      {"value": "b", "text": "4"},
-      {"value": "c", "text": "5"}
+      {"value": "a", "text": "list", "is_correct": true},
+      {"value": "b", "text": "dict", "is_correct": true},
+      {"value": "c", "text": "tuple", "is_correct": false},
+      {"value": "d", "text": "str", "is_correct": false}
+    ],
+    "answer": ["a", "b"]
+  },
+  {
+    "id": 3,
+    "text": "What keyword is used to define a function in Python?",
+    "options": [
+      {"value": "a", "text": "function", "is_correct": false},
+      {"value": "b", "text": "def", "is_correct": true},
+      {"value": "c", "text": "fun", "is_correct": false}
     ],
     "answer": "b"
+  },
+  {
+    "id": 4,
+    "text": "What is the result of '3' + '4' in Python?",
+    "options": [
+      {"value": "a", "text": "7", "is_correct": false},
+      {"value": "b", "text": "'34'", "is_correct": true},
+      {"value": "c", "text": "TypeError", "is_correct": false}
+    ],
+    "answer": "b"
+  },
+  {
+    "id": 5,
+    "text": "Which statement is used to handle exceptions?",
+    "options": [
+      {"value": "a", "text": "try / except", "is_correct": true},
+      {"value": "b", "text": "if / else", "is_correct": false},
+      {"value": "c", "text": "for / while", "is_correct": false}
+    ],
+    "answer": "a"
+  },
+  {
+    "id": 6,
+    "text": "Which built-in function returns the number of items in a collection?",
+    "options": [
+      {"value": "a", "text": "count()", "is_correct": false},
+      {"value": "b", "text": "size()", "is_correct": false},
+      {"value": "c", "text": "len()", "is_correct": true}
+    ],
+    "answer": "c"
   }
 ]
