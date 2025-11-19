@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "text": "What is the capital of France?",
+    "options": [
+      {"value": "a", "text": "Paris"},
+      {"value": "b", "text": "London"},
+      {"value": "c", "text": "Berlin"}
+    ],
+    "answer": "a"
+  },
+  {
+    "id": 2,
+    "text": "2 + 2 = ?",
+    "options": [
+      {"value": "a", "text": "3"},
+      {"value": "b", "text": "4"},
+      {"value": "c", "text": "5"}
+    ],
+    "answer": "b"
+  }
+]

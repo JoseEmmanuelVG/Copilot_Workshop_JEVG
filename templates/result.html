@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="text-center">
+    <h1>Your Score</h1>
+    <p class="lead">You scored <strong>{{ score }}</strong> out of <strong>{{ total }}</strong>.</p>
+    <a href="/assessment" class="btn btn-secondary">Try again</a>
+  </div>
+{% endblock %}
