@@ -1,2 +1,35 @@
-body { padding-bottom: 40px; }
-.lead { font-size: 1.25rem; }
+
+/* Page spacing */
+body {
+	padding: 2rem 0 3rem 0;
+	background-color: #f8f9fa;
+}
+
+.lead {
+	font-size: 1.1rem;
+}
+
+/* Question card styling */
+.question-card {
+	padding: 0.9rem 1rem;
+	border-radius: 8px;
+	background: #ffffff;
+	border: 1px solid #e9ecef;
+	margin-bottom: 0.9rem;
+}
+
+.question-card h5 {
+	margin-bottom: 0.5rem;
+}
+
+/* Make the submit button stand out while staying minimal */
+.btn-primary {
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+	box-shadow: 0 4px 10px rgba(13,110,253,0.12);
+}
+
+.btn-primary:hover {
+	background-color: #0b5ed7;
+	border-color: #0b5ed7;
+}
