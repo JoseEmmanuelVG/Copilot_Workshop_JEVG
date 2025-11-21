@@ -11,6 +11,11 @@
     <nav class="navbar navbar-light bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="/assessment">Assessment</a>
+        {% if username %}
+          <div class="ms-auto">
+            <span class="navbar-text">Hello, {{ username }}</span>
+          </div>
+        {% endif %}
       </div>
     </nav>
 

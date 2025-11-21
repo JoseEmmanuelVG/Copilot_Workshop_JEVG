@@ -22,6 +22,8 @@ def test_get_assessment_contains_questions(monkeypatch):
     # Mock load_questions to return our deterministic set
     monkeypatch.setattr(main, "load_questions", lambda: SAMPLE_QUESTIONS)
 
+    # set the username cookie so access control allows assessment
+    client.cookies.set("username", "tester")
     r = client.get("/assessment")
     assert r.status_code == 200
     page = unescape(r.text)
@@ -34,6 +36,8 @@ def test_post_submit_redirect_and_score(monkeypatch):
 
     # Prepare all-correct answers
     data = {str(q["id"]): q["answer"] for q in SAMPLE_QUESTIONS}
+    # set username cookie so submit is allowed
+    client.cookies.set("username", "tester")
     r = client.post("/submit", data=data)
 
     # TestClient may follow redirects automatically; check history for a 303

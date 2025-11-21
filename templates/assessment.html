@@ -6,13 +6,29 @@
   <form method="post" action="/submit">
     {% for q in questions %}
       <div class="mb-4">
-        <h5 class="mb-2">{{ q.text }}</h5>
-        {% for opt in q.options %}
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="{{ q.id }}" id="q{{ q.id }}_{{ opt.value }}" value="{{ opt.value }}">
-            <label class="form-check-label" for="q{{ q.id }}_{{ opt.value }}">{{ opt.text }}</label>
-          </div>
-        {% endfor %}
+        <h5 class="mb-2">{{ q.text }}
+          {% if q.answer is sequence and q.answer is not string %}
+            <small class="text-muted"> (choose all that apply)</small>
+          {% endif %}
+        </h5>
+
+        {% if q.answer is sequence and q.answer is not string %}
+          {# multi-choice: render checkboxes #}
+          {% for opt in q.options %}
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="{{ q.id }}" id="q{{ q.id }}_{{ opt.value }}" value="{{ opt.value }}">
+              <label class="form-check-label" for="q{{ q.id }}_{{ opt.value }}">{{ opt.text }}</label>
+            </div>
+          {% endfor %}
+        {% else %}
+          {# single-choice: render radios #}
+          {% for opt in q.options %}
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="{{ q.id }}" id="q{{ q.id }}_{{ opt.value }}" value="{{ opt.value }}">
+              <label class="form-check-label" for="q{{ q.id }}_{{ opt.value }}">{{ opt.text }}</label>
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
     {% endfor %}
 
